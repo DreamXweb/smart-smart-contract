@@ -4,6 +4,43 @@ pragma solidity ^0.8.0;
 
 contract MyShop {
 
+    // cannot be in memory
+    // does not have length or size
+    mapping (address => uint) public payments; // storage
+
+    // cannot be in memory
+    address public myAddr = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4; // storage
+
+    // value is only available is payable
+    function receiveFunds() public payable {
+        payments[msg.sender] = msg.value;
+    }
+
+    function transferTo(address /* payable */ targetAddr, uint amount) public {
+        address payable _to = payable(targetAddr);
+        _to.transfer(amount);
+    }
+
+    // view : transaction -> call .... need to vrite returns(type)
+    function getBalance(address targetAddr) public view returns(uint) {
+        return targetAddr.balance;
+    }
+
+    // we canno get string length
+    // we cannot concat strings
+    // we cannot compare string
+    // we cannot string[index]
+    string public myStr = "test"; // storage
+
+    // memory can be calldata
+    function demo(string memory newValueStr) public {
+        
+        // memory cannot be sorage here
+        string memory myTempStr = "temp";
+        myStr = newValueStr;
+
+    }
+
     uint8 public myVal = 254;
 
     function inc() public {
@@ -63,7 +100,6 @@ contract MyShop {
 
     // 0xd9145CCE52D386f254917e481eB44e9943F39138
     address public owner;
-    mapping (address => uint) public payments;
 
     constructor () {
         owner = msg.sender;

@@ -31,6 +31,38 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "newValueStr",
+						"type": "string"
+					}
+				],
+				"name": "demo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "targetAddr",
+						"type": "address"
+					}
+				],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "inc",
 				"outputs": [],
@@ -58,6 +90,19 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "myAddr",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -130,6 +175,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "myStr",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "myUint",
 				"outputs": [
 					{
@@ -195,6 +253,31 @@
 			},
 			{
 				"inputs": [],
+				"name": "receiveFunds",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "targetAddr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferTo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "withdrawAll",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -229,11 +312,11 @@
 	},
 	"sources": {
 		"contracts/Demo.sol": {
-			"keccak256": "0xac2b35b94f1759b0f8e14ada9c47db3516f3ce014c1f32f5ced6c5ce2621653d",
+			"keccak256": "0x603ff5c04a87cb83b08bfcf29f56feb82f04d160d4e16893885056ed436f98cf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a08375b0f0d153f1c39c3e3194bb8d18e603972eefa64e86114dad056c362ee6",
-				"dweb:/ipfs/Qmb42bHpqfJrQknytLhzHycXuPEB8sFLYTZWKWaJGfQdEh"
+				"bzz-raw://ba2b453c065cf064a025ca81140c825a94e52fc72d01eacc65eb2851650cb514",
+				"dweb:/ipfs/QmVxtxCbpTSmA1Nc15vGBrE74Lk1fdtMLu37xcrbjhxx98"
 			]
 		}
 	},
